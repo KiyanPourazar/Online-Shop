@@ -13,54 +13,63 @@ export const PRODUCTS = [
         id : 1,
         productName: 'Porsche Carrera 2025',
         price: 150000,
-        productImage: porsche
+        productImage: porsche,
+        available: 5
     },
     {
         id : 2,
         productName: 'Chevrolet Corvette Carbon 2018',
         price: 89000,
-        productImage: Chevrolet
+        productImage: Chevrolet,
+        available: 5
     },
     {
         id : 3,
         productName: 'Dodge Challenger SRT Demon 2023',
         price: 12900,
-        productImage: dodge
+        productImage: dodge,
+        available: 5
     },
     {
         id : 4,
         productName: 'Cadillac Sccalade 2025',
         price: 99000,
-        productImage: cadillac
+        productImage: cadillac,
+        available: 5
     },
     {
         id : 5,
         productName: 'RollsRois Ghost 2024',
         price: 299000,
-        productImage: rollsrolis
+        productImage: rollsrolis,
+        available: 5
     },
     {
         id : 6,
         productName: 'Ford Mustang Shelby GT500 2024',
         price: 89000,
-        productImage: mustang
+        productImage: mustang,
+        available: 5
     },
     {
         id : 7,
         productName: 'Ferrari F8 Tributo 2025',
         price: 349000,
-        productImage: ferrari
+        productImage: ferrari,
+        available: 5
     },
     {
         id : 8,
         productName: 'Lambortghini Temerario 2024',
         price: 399000,
-        productImage: lambortghini
+        productImage: lambortghini,
+        available: 5
     },
     {
         id : 9,
         productName: 'Nissan GTR R35 Nismo',
         price: 199000,
-        productImage: nissan
+        productImage: nissan,
+        available: 5
     }
 ]
