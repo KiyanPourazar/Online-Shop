@@ -1,7 +1,18 @@
 import "./Shop.css"
+import React from "react"
+import { PRODUCTS } from "../../Components/Data/Products"
+import Product from './product'
+
 const Shop = () => {
     return(
-        <h1 className="Shop">Shop</h1>
+        <React.Fragment>
+        <h1>SHOP</h1>
+        <div class="row">   
+            {PRODUCTS.map((productData)=>{
+               return <Product key={productData.id} data={productData} />
+            })}
+        </div>
+        </React.Fragment>
     )
 }
 
