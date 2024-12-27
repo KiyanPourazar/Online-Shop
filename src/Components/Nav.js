@@ -7,13 +7,13 @@ import "./Nav.css"
 
 const Nav = () => {
     const { cartItems } = useContext(ShopContext)
-    const itemcount = cartItems.reduce((prev, current) => {
+    const itemcount = cartItems?.reduce((prev, current) => {
         return prev + current.count
     }, 0)
     return (
         <div className="navbar navbar-dark bg-dark navbar-expand-lg">
             <div className="container">
-                <a className="navbar-brand">Kiyan Shop</a>
+                <a className="navbar-brand">Kiyan Garage</a>
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link to="/" className="nav-link">

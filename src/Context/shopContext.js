@@ -4,7 +4,8 @@ import { useCart } from "../hook/useCart";
 export const ShopContext = createContext({
     cartItems: null,
     addCart: () => { },
-    removeCart: () => { }
+    removeCart: () => { },
+    resetCart: () => { }
 })
 
 export const ShopContextProvider = (props) => {

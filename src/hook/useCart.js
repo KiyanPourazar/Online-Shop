@@ -1,10 +1,18 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PRODUCTS } from "../Components/Data/Products"; 
 
 
 export const useCart = () => {
-    const [cartItems , setCartItems] =useState([])
-
+    const [cartItems , setCartItems] =useState()
+    
+    useEffect(()=>{
+        const data = localStorage.getItem("Kiyan_cart")
+        setCartItems(!!JSON.parse(data) ? JSON.parse(data): [])
+    },[])
+    useEffect(()=>{
+        if(cartItems !== undefined)
+        localStorage.setItem("Kiyan_cart", JSON.stringify(cartItems))
+    },[cartItems])
     const addCart = (itemId) => {
             
             const product = PRODUCTS.find((item) => item.id === itemId);
@@ -43,5 +51,9 @@ export const useCart = () => {
                     .filter((item) => item.count > 0) 
             );
         };
-    return {cartItems, addCart, removeCart}
+        const resetCart = () => {
+            setCartItems()
+            localStorage.removeItem("Kiyan_cart")
+        }
+    return {cartItems, addCart, removeCart, resetCart}
 }
