@@ -54,6 +54,7 @@ export const useCart = () => {
         const resetCart = () => {
             setCartItems()
             localStorage.removeItem("Kiyan_cart")
+            localStorage.clear()
         }
     return {cartItems, addCart, removeCart, resetCart}
 }
